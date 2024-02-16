@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('https://th.bing.com/th/id/OIP.bfatIM7mbhCboitU6WW-YgHaDS?w=342&h=155&c=7&r=0&o=5&dpr=1.4&pid=1.7');
+        color: #333;
+    }
+
+    .hero {
+        height: 100vh;
+        background: url('hero.jpg') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .hero button {
+        padding: 10px 20px;
+        font-size: 1.2em;
+        color: #333;
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .hero button:hover {
+        background-color: #ddd;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        animation: appear 1s ease;
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .recipe {
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: rgb(250, 192, 202);
+        box-shadow: 0 2px 5px rgba(247, 4, 186, 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .recipe:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .recipe h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .recipe img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .ingredients, .instructions {
+        margin-top: 10px;
+    }
+
+    ul, ol {
+        padding-left: 20px;
+    }
+
+    ul li, ol li {
+        line-height: 1.6;
+    }
+
+    #search {
+        margin-bottom: 20px;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div>
+            <h1>FOOD FROM THE HEAVEN MENU</h1>
+            <button onclick="scrollToRecipes()">See Recipes</button>
+        </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="recipe">
+            <h2>Recipe 1: INSARABASAB</h2>
+            <img src="Insarabasab.jpg"alt="INSARABASAB">
+            <div class="info">
+                <p>Prep time: 25 mins</p>
+                <p>Servings: 4</p>
+            </div>
+            <div class="ingredients">
+                <h3>Inngredients:</h3>
+                <ul>
+                    <li>Ginger,Onion leaves</li>
+                    <li>Vinegar,Soy</li>
+                    <li>Meat of Pig</li>
+                    <!-- Add more ingredients here -->
+                </ul>
+            </div>
+            <div class="Procedure">
+                <h3>Procedure:</h3>
+                <ol>
+                    <li>Grill a Meat of a Pig</li>
+                    <li>Mix all Together</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="recipe">
+            <h2>Recipe 2: IGADO</h2>
+            <img src="igado" alt="IGADO">
+            <div class="info">
+                <p>Prep time: 40 mins</p>
+                <p>Servings: 4</p>
+            </div>
+            <div class="ingredients">
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Liver,Lungs,Kidney,Flesh Of Pig</li>
+                    <li>Carrots,Potato,Red Bell Pepper</li>
+                </ul>
+            </div>
+            <div class="Procedure">
+                <h3>Procedure:</h3>
+                <ol>
+                    <li>Saute The Garlic,Onion,Red Bell Pepper</li>
+                    <li>Put Liver,Lungs,Kidney,Flesh Of Pig </li>
+                    <li>And put fish sauce to adjust the taste</li>
+                </ol>
+            </div>
+        </div>
+		<div class="recipe">
+            <h2>Recipe 3: PINAPAITAN</h2>
+            <img src="pinapaitan.jpg" alt="Pinapaitan">
+            <div class="info">
+                <p>Prep time: 30 mins</p>
+                <p>Servings: 4</p>
+            </div>
+            <div class="ingredients">
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Internal Organs Of Cow</li>
+                    <li>The Juice of Vile Of Cow</li>
+                    <li>The Juice Extracted From The Stomach Of Cow</li>
+                </ul>
+            </div>
+            <div class="iProcedure">
+                <h3>Procedure:</h3>
+                <ol>
+                    <li>Saute The Garlic,Onion,Ginger</li>
+                    <li>Put The Internal Organs Of Cow</li>
+                    <li>Put The juice of Vile and Stomach of Cow</li>
+                    
+                </ol>
+            </div>
+        </div>
+		<div class="recipe">
+            <h2>Dessert 1: PATUPAT</h2>
+            <img src="patupat.jpg" alt="PATUPAT">
+            <div class="info">
+                <p>Prep time:15mins</p>
+                <p>  Servings: 30pcs</p>
+		</ol>
+    </div>
+    <div class="instructions">
+            <h3>Description:</h3>
+            <ol>
+                <p>This Food is made from malagkit rice, sugar and wrapped in banana leaves. This food is delacacies of ballesteros.</p>
+            </ol>
+            </div>
+    	</div>
+			<div class="recipe">
+            <h2>Dessert 2: BIBINGKA</h2>
+            <img src="bibingka" alt="BIBINGKA">
+            <div class="info">
+                <p>Prep time: 20 mins</p>
+                <p>Servings: 3 bibingka</p>
+		</ol>
+            </div>
+		<div class="instructions">
+                <h3>Description:</h3>
+                <ol>
+                    <p>This Food is made from malagkit rice, coconut milk and sugar. This food is delacacies of ballesteros.</p>
+                </ol>
+            </div>
+        </div>
+	</div>
+		<div class="recipe">
+            <h2>BREAKFAST BOODLE FIGHT</h2>
+            <img src="breakfast" alt="BREAKFAST BOODLE FIGHT">
+            <div class="info">
+                <p>Prep time: 35 mins</p>
+                <p>Servings: 5 Person</p>
+		</ol>
+		</div>
+		<div class="instructions">
+                <h3>Instructions:</h3>
+                <ol>
+                    <p>Hotdogs,Longganisa,Fried Bangus,Spam,Tocino,Red Egg,Fried egg,Fried Daing,Fried Rice </p>
+                    <P>"Bond with your family with our delicious Breakfast Boodle Fight"</P>
+                </ol>
+            </div>
+            </div>
+    <script>
+    function scrollToRecipes() {
+        window.scrollTo({
+            top: document.querySelector('.container').offsetTop,
+            behavior: 'smooth'
+        });
+    }
+
+    // Get elements
+    var searchInput = document.getElementById('search');
+    var recipes = Array.from(document.getElementsByClassName('recipe'));
+
+    // Add event listener to search input
+    searchInput.addEventListener('input', function() {
+        var searchTerm = this.value.toLowerCase();
+
+        // Show or hide recipes based on search term
+        recipes.forEach(function(recipe) {
+            var title = recipe.getElementsByTagName('h2')[0].innerText.toLowerCase();
+            if (title.includes(searchTerm)) {
+                recipe.style.display = '';
+            } else {
+                recipe.style.display = 'none';
+            }
+        });
+    });
+    </script>
+</body>
+</html>
